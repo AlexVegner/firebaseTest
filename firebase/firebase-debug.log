@@ -1,0 +1,77 @@
+[debug] [2019-06-14T12:27:58.368Z] ----------------------------------------------------------------------
+[debug] [2019-06-14T12:27:58.371Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting --debug
+[debug] [2019-06-14T12:27:58.371Z] CLI Version:   7.0.0
+[debug] [2019-06-14T12:27:58.371Z] Platform:      darwin
+[debug] [2019-06-14T12:27:58.371Z] Node Version:  v10.16.0
+[debug] [2019-06-14T12:27:58.372Z] Time:          Fri Jun 14 2019 15:27:58 GMT+0300 (Eastern European Summer Time)
+[debug] [2019-06-14T12:27:58.373Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-14T12:27:58.383Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-14T12:27:58.383Z] > authorizing via signed-in user
+[debug] [2019-06-14T12:27:58.384Z] [iam] checking project test-alex-cb960 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-14T12:27:58.385Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/test-alex-cb960:testIamPermissions  
+
+[debug] [2019-06-14T12:27:59.375Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-14T12:27:59.377Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/test-alex-cb960  
+ 
+[debug] [2019-06-14T12:27:59.985Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'test-alex-cb960'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-14T12:27:59.989Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/test-alex-cb960/versions  
+
+[debug] [2019-06-14T12:28:01.622Z] <<< HTTP RESPONSE 200
+[info] i  hosting[test-alex-cb960]: beginning deploy...
+[info] i  hosting[test-alex-cb960]: found 285 files in public
+[debug] [2019-06-14T12:28:01.682Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-06-14T12:28:03.367Z] [hosting] hash cache [cHVibGlj] stored for 285 files
+[debug] [2019-06-14T12:28:03.368Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-14T12:28:03.368Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/test-alex-cb960/versions/6a9fa84d19092e42:populateFiles  
+ <request body omitted>
+[info] i  hosting: adding files to version [0/285] (0%)
+[info] i  hosting: adding files to version [0/285] (0%)
+[debug] [2019-06-14T12:28:06.321Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-14T12:28:06.321Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-14T12:28:06.321Z] [hosting] uploads queued: 0
+[debug] [2019-06-14T12:28:06.321Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[test-alex-cb960]: file upload complete
+[debug] [2019-06-14T12:28:06.322Z] [hosting] deploy completed after 4699ms
+[debug] [2019-06-14T12:28:06.479Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "test-alex-cb960"
+    },
+    "site": "test-alex-cb960",
+    "version": "sites/test-alex-cb960/versions/6a9fa84d19092e42"
+  }
+]
+[info] i  hosting[test-alex-cb960]: finalizing version...
+[debug] [2019-06-14T12:28:06.479Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/test-alex-cb960/versions/6a9fa84d19092e42?updateMask=status  
+
+[debug] [2019-06-14T12:28:07.589Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-14T12:28:07.589Z] [hosting] finalized version for test-alex-cb960:
+[info] ✔  hosting[test-alex-cb960]: version finalized
+[info] i  hosting[test-alex-cb960]: releasing new version...
+[debug] [2019-06-14T12:28:07.590Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/test-alex-cb960/releases?version_name=sites/test-alex-cb960/versions/6a9fa84d19092e42  
+
+[debug] [2019-06-14T12:28:08.791Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-14T12:28:08.791Z] [hosting] release:
+[info] ✔  hosting[test-alex-cb960]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/test-alex-cb960/overview
+[info] Hosting URL: https://test-alex-cb960.firebaseapp.com
