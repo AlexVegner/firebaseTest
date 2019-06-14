@@ -1,2 +1,2 @@
 # Deploy to firebase
-rm -rf firebase/public && mkdir firebase/public && cd web/ && pwd && flutter packages get && webdev build && cp -r build/* ../firebase/public/ && cd ../firebase/ && firebase deploy --only hosting
+rm -rf firebase/public && mkdir firebase/public && cd web/ && pwd && flutter packages get && webdev build && cp -r build/* ../firebase/public/ && cd ../firebase/ && firebase deploy --only hosting --debug
